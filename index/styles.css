@@ -1,0 +1,244 @@
+/* styles.css */
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    background-color: #121212;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #d37f01;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('image.jpg') no-repeat center center/cover; /* Mise à jour pour intégrer l'image */
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Couche sombre pour le contraste */
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #f39c12;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #e67e22;
+}
+
+/* Games Section */
+.games-section {
+    padding: 60px 40px;
+    background-color: #181818;
+    text-align: center;
+}
+
+.games-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.game-card {
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.game-card h3 {
+    margin: 15px 0;
+    color: #f39c12;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+/* News Section */
+.news-section {
+    padding: 60px 40px;
+    background-color: #202020;
+    text-align: center;
+}
+
+.news-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.news-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.news-card h3 {
+    color: #f39c12;
+    margin-bottom: 10px;
+}
+
+.news-card p {
+    margin-bottom: 15px;
+    color: #bfbfbf;
+}
+
+.news-card .btn {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.news-card .btn:hover {
+    color: #e67e22;
+}
+
+.news-card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #1c1c1c;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .footer-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links li a:hover {
+    color: #f39c12;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .games-section h2,
+    .news-section h2 {
+        font-size: 2rem;
+    }
+}
